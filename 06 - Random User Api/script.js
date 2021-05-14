@@ -12,7 +12,8 @@ getRandomUser();
 getRandomUser();
 
 async function getRandomUser() {
-  const res = await fetch('https://randomuser.me/api/');
+  const url = 'https://randomuser.me/api/';
+  const res = await fetch(url);
   const data = await res.json();
   const user = data.results[0];
   const newUser = {
